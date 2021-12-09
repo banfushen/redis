@@ -10,6 +10,7 @@ import (
 	"github.com/go-redis/redis/v8/internal"
 	"github.com/go-redis/redis/v8/internal/pool"
 	"github.com/go-redis/redis/v8/internal/proto"
+	"github.com/go-redis/redis/v8/internal/hashtag"
 )
 
 // Nil reply returned by Redis when key does not exist.
@@ -18,6 +19,11 @@ const Nil = proto.Nil
 func SetLogger(logger internal.Logging) {
 	internal.Logger = logger
 }
+
+func Slot(key string) int {
+	return hashtag.Slot(key)
+}
+
 
 //------------------------------------------------------------------------------
 
