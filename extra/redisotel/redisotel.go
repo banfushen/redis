@@ -9,7 +9,7 @@ import (
 	"go.opentelemetry.io/otel/trace"
 
 	"github.com/go-redis/redis/extra/rediscmd/v8"
-	"github.com/go-redis/redis/v8"
+	"github.com/banfushen/redis/v8"
 )
 
 var tracer = otel.Tracer("github.com/go-redis/redis")

@@ -7,10 +7,10 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/go-redis/redis/v8/internal"
-	"github.com/go-redis/redis/v8/internal/pool"
-	"github.com/go-redis/redis/v8/internal/proto"
-	"github.com/go-redis/redis/v8/internal/hashtag"
+	"github.com/banfushen/redis/v8/internal"
+	"github.com/banfushen/redis/v8/internal/hashtag"
+	"github.com/banfushen/redis/v8/internal/pool"
+	"github.com/banfushen/redis/v8/internal/proto"
 )
 
 // Nil reply returned by Redis when key does not exist.
@@ -23,7 +23,6 @@ func SetLogger(logger internal.Logging) {
 func Slot(key string) int {
 	return hashtag.Slot(key)
 }
-
 
 //------------------------------------------------------------------------------
 
